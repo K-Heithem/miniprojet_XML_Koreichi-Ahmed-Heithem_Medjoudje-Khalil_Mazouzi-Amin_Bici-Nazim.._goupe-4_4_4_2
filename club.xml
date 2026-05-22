@@ -2,7 +2,6 @@
 <club xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="club.xsd">
 
-  <!-- ========== CATEGORIES ========== -->
   <categories>
     <categorie id="C1">
       <libelle>Intelligence Artificielle</libelle>
@@ -15,7 +14,7 @@
     </categorie>
   </categories>
 
-  <!-- ========== MEMBRES ========== -->
+
   <membres>
     <membre id="M001" categorieRef="C1">
       <nom>Koreichi</nom>
@@ -59,10 +58,10 @@
     </membre>
   </membres>
 
-  <!-- ========== CONCOURS ========== -->
+  
   <listesConcours>
 
-    <!-- CO1 : compétition IA — M003 présent (sera supprimé via updates.xq) -->
+   
     <concours id="CO1" categorieRef="C1" coefficient="2.0">
       <titre>Compétition Intelligence Artificielle 2025</titre>
       <date>2025-03-15</date>
@@ -86,7 +85,6 @@
       </participants>
     </concours>
 
-    <!-- CO2 : coefficient initial 1.5 — sera modifié à 2.0 via updates.xq -->
     <concours id="CO2" categorieRef="C2" coefficient="1.5">
       <titre>Hackathon Développement Web 2025</titre>
       <date>2025-04-20</date>
@@ -106,7 +104,7 @@
       </participants>
     </concours>
 
-    <!-- CO3 : compétition Cybersécurité -->
+   
     <concours id="CO3" categorieRef="C3" coefficient="3.0">
       <titre>CTF Cybersécurité 2025</titre>
       <date>2025-05-10</date>
