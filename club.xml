@@ -18,29 +18,29 @@
   <!-- ========== MEMBRES ========== -->
   <membres>
     <membre id="M001" categorieRef="C1">
-      <nom>Benali</nom>
+      <nom>Koreichi</nom>
       <prenom>Ahmed</prenom>
-      <email>a.benali@club.dz</email>
+      <email>a.koreichi@club.dz</email>
     </membre>
     <membre id="M002" categorieRef="C1">
-      <nom>Meziane</nom>
-      <prenom>Sara</prenom>
-      <email>s.meziane@club.dz</email>
+      <nom>Bouzid</nom>
+      <prenom>Heithem</prenom>
+      <email>h.bouzid@club.dz</email>
     </membre>
     <membre id="M003" categorieRef="C2">
-      <nom>Bouzid</nom>
-      <prenom>Karim</prenom>
-      <email>k.bouzid@club.dz</email>
+      <nom>Mazouzi</nom>
+      <prenom>Amin</prenom>
+      <email>a.mazouzi@club.dz</email>
     </membre>
     <membre id="M004" categorieRef="C2">
-      <nom>Djamal</nom>
-      <prenom>Amira</prenom>
-      <email>a.djamal@club.dz</email>
+      <nom>Medjoudje</nom>
+      <prenom>Khalil</prenom>
+      <email>k.medjoudje@club.dz</email>
     </membre>
     <membre id="M005" categorieRef="C3">
-      <nom>Hamidi</nom>
-      <prenom>Yacine</prenom>
-      <email>y.hamidi@club.dz</email>
+      <nom>Bici</nom>
+      <prenom>Nazim</prenom>
+      <email>n.bici@club.dz</email>
     </membre>
     <membre id="M006" categorieRef="C3">
       <nom>Ouali</nom>
