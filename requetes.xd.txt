@@ -1,0 +1,15 @@
+(: Q1 :)
+let $doc := doc("club.xml")
+return
+<membres>
+  {
+    for $m in $doc//membre
+    let $cat := $doc//categorie[@id = $m/@categorieRef]
+    return
+      <membre id="{$m/@id}">
+        <nomComplet>{concat($m/prenom, ' ', $m/nom)}</nomComplet>
+        <email>{$m/email/text()}</email>
+        <categorie>{$cat/libelle/text()}</categorie>
+      </membre>
+  }
+</membres>
