@@ -29,4 +29,29 @@ return
         <categorie>{$cat/libelle/text()}</categorie>
       </concours>
   }
-</concoursList>
+</concoursList>(: Q3 :)
+let $doc := doc("club.xml")
+return
+<scores>
+  {
+    for $c in $doc//concours
+    return
+      <concours titre="{$c/titre/text()}">
+        {
+          for $p in $c/participants/participant
+          let $m := $doc//membre[@id = $p/@membreRef]
+          let $comp := xs:integer($p/complexite)
+          let $time := xs:integer($p/tempsExecution)
+          let $coef := xs:decimal($c/@coefficient)
+          let $score := round((($comp + $time) * $coef) * 100) div 100
+          return
+            <participant>
+              <nomComplet>{concat($m/prenom, ' ', $m/nom)}</nomComplet>
+              <complexite>{$comp}</complexite>
+              <tempsExecution>{$time}</tempsExecution>
+              <score>{$score}</score>
+            </participant>
+        }
+      </concours>
+  }
+</scores>
