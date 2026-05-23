@@ -13,3 +13,20 @@ return
       </membre>
   }
 </membres>
+(: Q2 :)
+let $doc := doc("club.xml")
+return
+<concoursList>
+  {
+    for $c in $doc//concours
+    let $cat := $doc//categorie[@id = $c/@categorieRef]
+    order by xs:date($c/date) ascending
+    return
+      <concours id="{$c/@id}">
+        <titre>{$c/titre/text()}</titre>
+        <date>{$c/date/text()}</date>
+        <coefficient>{$c/@coefficient/text()}</coefficient>
+        <categorie>{$cat/libelle/text()}</categorie>
+      </concours>
+  }
+</concoursList>
