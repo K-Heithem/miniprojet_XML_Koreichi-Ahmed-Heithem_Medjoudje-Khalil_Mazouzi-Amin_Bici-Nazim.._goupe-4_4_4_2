@@ -79,12 +79,14 @@
     </xs:restriction>
   </xs:simpleType>
 
+
   <xs:complexType name="ListesConcoursType">
     <xs:sequence>
       <xs:element name="concours" type="ConcoursType"
                   minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
+               
 
   <xs:complexType name="ConcoursType">
     <xs:sequence>
