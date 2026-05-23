@@ -89,3 +89,21 @@ return
       </concours>
   }
 </vainqueurs>
+(: Q5 :)
+declare variable $categorie as xs:string external := "Intelligence Artificielle";
+let $doc := doc("club.xml")
+let $cat := $doc//categorie[libelle = $categorie]
+return
+<membresCategorie categorie="{$categorie}">
+  {
+    for $m in $doc//membre[@categorieRef = $cat/@id]
+    order by $m/nom ascending, $m/prenom ascending
+    return
+      <membre id="{$m/@id}">
+        <nom>{$m/nom/text()}</nom>
+        <prenom>{$m/prenom/text()}</prenom>
+        <email>{$m/email/text()}</email>
+      </membre>
+  }
+</membresCategorie>
+
