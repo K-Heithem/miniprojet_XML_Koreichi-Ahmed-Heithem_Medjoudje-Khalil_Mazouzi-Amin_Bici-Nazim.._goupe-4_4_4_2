@@ -29,7 +29,8 @@ return
         <categorie>{$cat/libelle/text()}</categorie>
       </concours>
   }
-</concoursList>(: Q3 :)
+</concoursList>
+(: Q3 :)
 let $doc := doc("club.xml")
 return
 <scores>
@@ -55,3 +56,36 @@ return
       </concours>
   }
 </scores>
+(: Q4 :)
+let $doc := doc("club.xml")
+return
+<vainqueurs>
+  {
+    for $c in $doc//concours
+    let $coef := xs:decimal($c/@coefficient)
+    let $scores := 
+      for $p in $c/participants/participant
+      let $m := $doc//membre[@id = $p/@membreRef]
+      let $score := (xs:integer($p/complexite) + xs:integer($p/tempsExecution)) * $coef
+      return
+        <part_score>
+          <nom>{$m/nom/text()}</nom>
+          <prenom>{$m/prenom/text()}</prenom>
+          <score>{$score}</score>
+        </part_score>
+    let $max_score := max($scores/score)
+    return
+      <concours id="{$c/@id}" titre="{$c/titre/text()}">
+        {
+          for $s in $scores
+          where $s/score = $max_score
+          return
+            <vainqueur>
+              <nom>{$s/nom/text()}</nom>
+              <prenom>{$s/prenom/text()}</prenom>
+              <score>{round($s/score * 100) div 100}</score>
+            </vainqueur>
+        }
+      </concours>
+  }
+</vainqueurs>
