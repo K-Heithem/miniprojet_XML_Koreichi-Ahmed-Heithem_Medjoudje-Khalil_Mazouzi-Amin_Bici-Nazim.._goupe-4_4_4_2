@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<club nom="Info_Tech"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="club.xsd">
+<club xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nom="Info_Tech" xsi:noNamespaceSchemaLocation="club.xsd">
 
   <categories>
     <categorie id="C1">
@@ -37,10 +34,10 @@
       <prenom>Khalil</prenom>
       <email>k.medjoudje@club.dz</email>
     </membre>
-    <membre id="M005" categorieRef="C3">
-      <nom>Bici</nom>
-      <prenom>Nazim</prenom>
-      <email>n.bici@club.dz</email>
+    <membre id="M005" categorieRef="C2">
+      <nom>Khabach</nom>
+      <prenom>Fadi</prenom>
+      <email>f.khabech@club.dz</email>
     </membre>
     <membre id="M006" categorieRef="C3">
       <nom>Ouali</nom>
