@@ -1,5 +1,5 @@
 <?php
-$xml = simplexml_load_file("club.xml");
+$xml = simplexml_load_file(__DIR__ . "/../club.xml");
 $concoursChoisi = $_GET['concours'] ?? '';
 
 $participants_scores = [];
