@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<club xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<club nom="Info_Tech"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="club.xsd">
 
   <categories>
@@ -56,6 +57,11 @@
       <prenom>Leila</prenom>
       <email>l.mansouri@club.dz</email>
     </membre>
+    <membre id="M009" categorieRef="C3">
+      <nom>Zerrouk</nom>
+      <prenom>Lyna</prenom>
+      <email>l.zerrouk@club.dz</email>
+    </membre>
   </membres>
 
   
@@ -73,10 +79,6 @@
         <participant membreRef="M002">
           <complexite>85</complexite>
           <tempsExecution>25</tempsExecution>
-        </participant>
-        <participant membreRef="M003">
-          <complexite>70</complexite>
-          <tempsExecution>35</tempsExecution>
         </participant>
         <participant membreRef="M007">
           <complexite>90</complexite>
@@ -117,7 +119,7 @@
           <complexite>88</complexite>
           <tempsExecution>22</tempsExecution>
         </participant>
-        <participant membreRef="M001">
+        <participant membreRef="M009">
           <complexite>72</complexite>
           <tempsExecution>28</tempsExecution>
         </participant>
